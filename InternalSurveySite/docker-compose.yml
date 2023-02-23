@@ -1,0 +1,12 @@
+version: "3"
+services:
+    angular:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "4201:80"
+            - "4202:443"
+        volumes:
+          - ~/.aspnet/https:/etc/ssl/certs
+

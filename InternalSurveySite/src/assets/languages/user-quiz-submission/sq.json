@@ -1,0 +1,21 @@
+{
+  "survey": "Pyetësori",
+  "submission": "Përfundoni pyetësorin",
+  "successSubmission": "Pyetësori u plotësua me sukses",
+  "other": "Tjetër",
+  "wait": "Ju lutem prisni...",
+  "hasVoted": "ka votuar",
+  "surveyHasExpired": "ka skaduar",
+  "invalidPage": "Faqe e pavlevshme",
+  "internalError": "Problem i brendshëm",
+  "invalidSurvey": "Pyetësor i pavlevshëm",
+  "invalidEmail": "Email i pavlevshëm",
+  "question": "Pyetja",
+  "questions": "Pyetjet",
+  "isRequired": "duhet plotësuar",
+  "areRequired": "duhen plotësuar",
+  "Comments": "Komentet",
+  "addComment": "Shto Koment",
+  "commentSubmission": "Komenti u shtua me sukses",
+  "comment": "Komenti:"
+}

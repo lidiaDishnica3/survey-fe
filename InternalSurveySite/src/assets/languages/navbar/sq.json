@@ -1,0 +1,12 @@
+{
+  "navbar": {
+    "selectLanguage": "Zgjidh gjuhën....",
+    "changeLanguage": "Ndrysho gjuhën : "
+  },
+  "sidebar": {
+    "survey": "Pyetësor",
+    "question": "Pyetje",
+    "respondent": "Ankëtar",
+    "users": "Përdorues"
+  }
+}

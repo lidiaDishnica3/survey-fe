@@ -1,0 +1,48 @@
+{
+  "titleSurvey": {
+    "title": "Create survey",
+    "titleUpdate": "Update survey"
+  },
+  "form": {
+    "formsErrors": "Form has errors. Please check your input values.",
+    "title": "Enter Survey Title",
+    "description": "Enter Survey Description",
+    "endDate": "Choose end date",
+    "endDateValidator": "End date should be grater then the current date.",
+    "questions": "Survey Questions",
+    "qtitle": "Question title",
+    "qrequired": "Is Required (Must have at least one answer)",
+    "qdesc": "Question description",
+    "qorder": "Question order",
+    "qtype": "Question type",
+    "addOption": "Add option",
+    "optiontext": "Option Text",
+    "qothers": "Has Other (text response)",
+    "stars": "Number of Maximum Stars (5-10)",
+    "startsError": "Number should be from 5 to 10",
+    "textarea": "Textarea to be filled by the respondent",
+    "addQuestion": "Add Question",
+    "addSurvey": "Add New Survey",
+    "updateSurvey": "Update Survey",
+    "wait": "Please wait...",
+    "back": "Go back",
+    "imgWrong": "Image is not uploaded successfully!Try again, please!",
+    "imgAdd": "Image is required field!",
+    "comments": "Survey Comments",
+    "comment": "Comment:",
+    "addComment": "Add Comment"
+  },
+  "error": {
+    "somethingWentWrongRetry": "Something has gone wrong. Please retry!",
+    "somethingWentWrong": "Something has gone wrong!",
+    "internalError": "Internal error!",
+    "requiredFields": "Please fill out the required fields!",
+    "cantEditSurvey": "This survey cannot be edited, because you have already published it!",
+    "cantDeleteComment": "You can not delete this comment!"
+  },
+
+  "success": {
+    "createdSuccessfully": "Survey has been created successfully!",
+    "updatedSuccessfully": "Survey has been updated successfully!"
+  }
+}

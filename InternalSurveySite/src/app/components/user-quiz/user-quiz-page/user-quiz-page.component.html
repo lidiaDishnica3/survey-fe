@@ -1,0 +1,172 @@
+<div class="survey-content container" *ngIf="tokenIsValid">
+  <br>
+  <div class="survey-questions-wrapper">
+    <form [formGroup]="userForm" (ngSubmit)="submit()">
+      <div class="d-flex justify-content-center row">
+        <div class="col-md-10 col-lg-10">
+          <div class="border">
+            <div class="scroll-shaddow"></div>
+            <div class="question bg-white p-3 border-bottom">
+              <div class="d-flex flex-row justify-content-between align-items-center mcq">
+                <h2 style="color: #ff4081;" class="text-center">
+                  {{surveyTitle}} : {{'questions'| translate}} <i class="fa fa-check-circle"></i>
+                </h2><span></span>
+              </div>
+              <div class="d-flex flex-row justify-content-between align-items-center mcq">
+                <h4>{{surveyDescription}}</h4>
+              </div>
+            </div>
+            <div class="survey-questions" formArrayName="questionAnswers">
+              <div *ngFor="let questionAnswerGroup of userForm.get('questionAnswers').controls; let order = index">
+                <div class="question bg-white p-3 border-bottom">
+                  <div class="d-flex flex-row align-items-center question-title">
+                    <h3 style="color: #ff4081; font-weight:500">
+                      {{order + 1}})
+                    </h3>
+                    <h3 class="mt-1 ml-2" style="color: slategray; font-weight:500; ">
+                      <label id="example-radio-group-label">
+                        {{questions[order].isRequired? "*": ""}}{{ questions[order].title }}
+                      </label>
+                    </h3>
+                  </div>
+
+                  <div class="ans ml-2">
+                    <div [ngSwitch]="questions[order].questionType" [formGroupName]="order">
+                      <!-- If questionType == RadioButon -->
+                      <div *ngSwitchCase="1">
+                        <mat-radio-group [required]="true" aria-labelledby="example-radio-group-label"
+                                         class="example-radio-group" formControlName="questionOptionId">
+                          <mat-radio-button class="example-radio-button"
+                                            *ngFor="let option of questions[order].surveyQuestionOptions"
+                                            (click)="radioChange(option.id, questions[order])" [value]="option.id">
+                            {{ option.option !== defaultHasOthersConstant ? option.option: "Other" }}
+                          </mat-radio-button>
+                        </mat-radio-group>
+                      </div>
+                      <!-- End If -->
+                      <!-- If questionType == CheckBox -->
+                      <div *ngSwitchCase="2">
+                        <section class="example-section">
+                          <mat-checkbox class="example-margin"
+                                        *ngFor="let option of displayOptions[order]; let checkIndex=index"
+                                        formArrayName="questionOptionIds"
+                                        (change)="optionChecked($event.checked, order, checkIndex, option.id)"
+                                        value="{{ this.userForm.get('questionAnswers').controls[order].controls.questionOptionIds.controls[checkIndex].value }}">
+                            {{ option.option }}
+                          </mat-checkbox>
+                        </section>
+                      </div>
+                      <!-- End If -->
+                      <!-- If questionType == Image -->
+                      <div *ngSwitchCase="3">
+                        <div class="">
+                          <div class="row text-center text-lg-left">
+                            <!-- <div *ngFor="let url of this.userForm.get('questionAnswers').controls[order].controls.imageUrls.value; let imgIndex=index" formArrayName="imageUrls"> -->
+                            <div *ngFor="let imageOption of this.userForm.get('questionAnswers').controls[order].controls.imageUrls.controls; let imgIndex=index"
+                                 formArrayName="imageUrls">
+                              <div class="col-lg-3 col-md-4 col-6 d-block mb-4 h-100">
+                                <img src="{{imageOption.value.url}}" (click)="toggleImage(order, imageOption.value.id)"
+                                     [ngClass]="imgClicked(order, imageOption.value.id)? 'clickedImage' : 'emptyImage'"
+                                     width="700" class="img-fluid img-thumbnail">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End If -->
+                      <!-- If questionType == Number -->
+                      <div *ngSwitchCase="4">
+                        <bar-rating [max]="questions[order].surveyQuestionOptions[0].option" formControlName="other">
+                        </bar-rating>
+                      </div>
+                      <!-- End If -->
+                      <!-- If questionType == Text -->
+                      <div *ngSwitchCase="5">
+                        <mat-form-field class="example-full-width" style="display:block;">
+                          <mat-label></mat-label>
+                          <textarea matInput placeholder="" formControlName="other">   </textarea>
+                        </mat-form-field>
+                      </div>
+                      <!-- End If -->
+                      <!-- Other -->
+                      <div *ngIf="questions[order].hasOthers">
+                        <mat-form-field class="example-full-width" style="display:block;">
+                          <mat-label>{{'other' | translate}}</mat-label>
+                          <textarea matInput placeholder="" formControlName="other">     </textarea>
+                        </mat-form-field>
+                      </div>
+                      <!-- End Other -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br />
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">{{'submission' | translate}}</button>
+            </div>
+            <br />
+            <!--add comment -->
+            <div class="survey-options">
+             
+              <div formArrayName="surveyComments" class="poll-options">
+                <div class="question bg-white p-3 border-bottom">
+                  <div class="d-flex flex-row justify-content-between align-items-center mcq">
+                    <h2 style="color: #ff4081;" class="text-center">
+                      {{ 'Comments' | translate }} <i class="fa fa-check-circle"></i>
+                    </h2><span></span>
+                  </div>
+                </div>
+
+                <div class="ans ml-2">
+                  <div style="padding:10px;" *ngFor="let commentCtrl of userForm.get('surveyComments')['controls']; let i = index">
+                    <div [formGroupName]="i">
+
+                      <div class="d-flex flex-row justify-content-between align-items-center mcq">
+                        <h5 color="grey">{{commentCtrl.controls.respondent.value}}</h5>
+                      </div>
+                      <h3 class="mt-1 ml-2" style="color: slategray; font-weight:500; ">
+                        <label id="example-radio-group-label">
+                          {{commentCtrl.controls.commentText.value}}
+                        </label>
+                      </h3>
+                    </div>
+                  </div>
+                  </div>
+                  <br />
+                </div>
+              </div>
+            <div class="survey-options">
+              <div formArrayName="surveyCommentsAdd" class="poll-options">
+
+                <div class="ans ml-2">
+                  <div style="padding:10px;" *ngFor="let commentAddCtrl of userForm.get('surveyCommentsAdd')['controls']; let i = index">
+                    <div [formGroupName]="i">
+                      <div>
+                        <mat-form-field class="full-width">
+                          <textarea style="resize: none;" disabled matInput formControlName="commentTextAdd" placeholder="{{ 'comment' | translate }}" [disabled]=" isDisabled"></textarea>
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="text-center">
+                    <button type="button" class="btn btn-primary" mat-raised-button (click)="onAddComment()">
+                      {{ 'addComment' | translate }}
+                    </button>
+                  </div>
+                </div>
+              </div>
+                <br />
+                <!--add comment -->
+              </div>
+        </div>
+        <br />
+      </div>
+    </form>
+    <br />
+  </div>
+  <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">
+    <p style="color: white">{{'wait' | translate}} </p>
+  </ngx-spinner>
+</div>

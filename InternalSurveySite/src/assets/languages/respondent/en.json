@@ -1,0 +1,36 @@
+{
+  "changeLanguage": "Change Language",
+  "card":{
+    "title": "Respondent",
+    "cardBtn": "Add new Respondent",
+    "wait": "Please wait..."
+  },
+  "table": {
+    "column": "{{ title }}",
+    "edit": "Edit",
+    "delete": "Delete",
+    "noData": "No data found"
+  },
+  "pager": {
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "modal": {
+    "add": "Add new respondent",
+    "edit": "Edit respondent",
+    "save": "Save",
+    "close": "Close"
+  },
+  "deleteModal":{
+    "header": "Delete respondent",
+    "msg": "Do you want to delete respondent ?",
+    "close": "Close",
+    "delete": "Delete"
+  },
+  "toastr":{
+    "somethingWrong": "Something went wrong!",
+    "editSuccess": "Respondent edited successfully.",
+    "createSuccess": "Respondent created successfully.",
+    "delete": "Respondent deleted successfully."
+  }
+}

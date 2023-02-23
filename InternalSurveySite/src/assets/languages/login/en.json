@@ -1,0 +1,11 @@
+{
+  "unauthorized": "Unauthorized",
+  "invalidEmailOrPassword": "Email or password not valid!",
+  "internalError": "Internal error!",
+  "loginSuccess": "Loged in successfully!",
+  "login": "Login",
+  "forgotPassword": "Forgot password?",
+  "password": "Password",
+  "field": "Please fill out the required fields!",
+  "wait": "Please wait..."
+}

@@ -1,0 +1,68 @@
+<div class="card m-4">
+  <div class="card-header">
+    <div class="row">
+      <span>
+        {{ 'card.title' | translate }}
+      </span>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <div class="container">
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" (click)="onModalClick()">
+        <span>
+          {{ 'card.cardBtn' | translate }}
+        </span>
+      </button>
+    </div>
+    <br>
+    <app-table [rows]="data" [columns]="columns" [delete]="true" [columnsSq]="columnsSq"
+    [paginationModel]="paginationModel" (paginationEmitter)="onPaginationValuesChange($event)" (actionClicked)="actionEvent($event)"></app-table>
+  </div>
+</div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 *ngIf="action == 'add'" class="modal-title">
+          {{ 'modal.add' | translate }}
+        </h5>
+        <!-- <h5 *ngIf="action == 'edit'" class="modal-title">
+          {{ 'modal.edit' | translate }}
+        </h5> -->
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form [formGroup]="responseForm" (ngSubmit)="onSubmit()">
+        <div class="modal-body">
+            <input type="hidden" formControlName="id" />
+            <div class="form-group">
+              <mat-form-field class="form-field">
+                <mat-label> E-mail
+                </mat-label>
+                <input type="email" id="email" matInput formControlName="email">
+                <mat-error *ngIf="!responseForm.get('email').valid && responseForm.get('email').touched">
+                  <span>Enter a valid email!</span>
+                </mat-error>
+              </mat-form-field>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" #closeBtn>
+            {{ 'modal.close' | translate }}
+          </button>
+          <button type="submit" class="btn btn-primary">
+            {{ 'modal.save' | translate }}
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">
+  <p style="color: white">{{ 'card.wait' | translate }} </p>
+</ngx-spinner>

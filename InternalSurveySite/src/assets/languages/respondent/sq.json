@@ -1,0 +1,36 @@
+{
+  "changeLanguage": "Ndrysho Gjuhën",
+  "card":{
+    "title": "Të dhënat e ankëtarit",
+    "cardBtn": "Shto nje ankëtar",
+    "wait": "Ju lutem prisni..."
+  },
+  "table": {
+    "column": "{{ title }}",
+    "edit": "Ndrysho",
+    "delete": "Fshi",
+    "noData": "Nuk u gjet asnjë e dhenë"
+  },
+  "pager": {
+    "previous": "Mbrapa",
+    "next": "Përpara"
+  },
+  "modal": {
+    "add": "Shto nje ankëtar",
+    "edit": "Ndysho dhënat e ankëtarit",
+    "save": "Ruaj",
+    "close": "Mbyll"
+  },
+  "deleteModal":{
+    "header": "Fshi ankëtarin",
+    "msg": "A doni të fshini ankëtarin ?",
+    "close": "Mbyll",
+    "delete": "Fshi"
+  },
+  "toastr":{
+    "somethingWrong": "Dicka nuk është në rregull!",
+    "editSuccess": "Ankëtari u azhornua me sukses.",
+    "createSuccess": "Ankëtari u krijua me sukses.",
+    "delete": "Ankëtari u fshi me sukses."
+  }
+}

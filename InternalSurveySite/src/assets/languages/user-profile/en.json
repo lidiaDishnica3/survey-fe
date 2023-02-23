@@ -1,0 +1,63 @@
+{
+  "register": "Register",
+  "user": "User",
+  "invalidForm": "Invalid form!",
+  "fillOut": "Please fill out the required fields!",
+  "somethingWentWrong": "Something went wrong!",
+
+  "successfullyRegistered": "Successfully registered!",
+  "successfullyEdited": "Successfully edited!",
+
+  "generalInformations": "General Informations",
+  "accountInformation": "Account Information",
+  "changeYourPassword": "Change your password",
+  "editUser": "Edit User",
+
+  "generalInformationsDescription": "Your profile details",
+  "firstName": "Firstname",
+  "lastName": "Lastname",
+  "email": "Email",
+  "password": "Password",
+  "currentPassword": "Current password",
+  "newPassword": "New password",
+  "confirmNewPassword": "Confirm new password",
+  "cancel": "Cancel",
+  "save": "Save",
+
+  "validatorNameIsRequired": "*Name is required.",
+  "validatorLastNameIsRequired": "*Lastname is required.",
+  "validatorEmailIsRequired": "*Email is required.",
+  "validatorEmailIsValid": "Must be a valid email.",
+  "validatorPasswordIsRequired": "*Password is required.",
+  "validatorNewPasswordIsRequired": "*New password is required.",
+  "validatorPasswordsMustMatch": "Password must match.",
+  "validatorPasswordPattern": "Passwords must contain at least eight characters, including uppercase, lowercase letters and numbers.",
+  "exists": "exists",
+  "wait": "Please wait...",
+  "notValid": "is not valid",
+  "table": {
+    "column": "{{ title }}",
+    "edit": "Edit",
+    "delete": "Delete",
+    "noData": "No data found"
+
+  },
+  "cardBtn": "Add new user",
+  "title": "Users",
+  "pager": {
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "deleteModal": {
+    "header": "Delete user",
+    "msg": "Do you want to delete user?",
+    "close": "Close",
+    "delete": "Delete"
+  },
+  "toastr": {
+    "somethingWrong": "Something went wrong!",
+    "editSuccess": "User edited successfully.",
+    "createSuccess": "User created successfully.",
+    "delete": "User deleted successfully."
+  }
+}

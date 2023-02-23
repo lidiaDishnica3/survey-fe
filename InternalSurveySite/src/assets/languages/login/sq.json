@@ -1,0 +1,11 @@
+{
+  "unauthorized": "Nuk mund te autorizoheni!",
+  "invalidEmailOrPassword": "Email ose fjalëkalim i pa saktë!",
+  "internalError": "Problem i brendshëm!",
+  "loginSuccess": "Kyçja u krye me sukses!",
+  "login": "Kyçu",
+  "forgotPassword": "Keni harruar fjalëkalimin?",
+  "password": "Fjalëkalim",
+  "field": "Ju lutem plotësoni fushat e detyrueshme!",
+  "wait": "Ju lutem prisni..."
+}

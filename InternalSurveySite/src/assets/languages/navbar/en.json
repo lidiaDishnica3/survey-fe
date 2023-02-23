@@ -1,0 +1,13 @@
+{
+  "navbar": {
+    "selectLanguage": "Select language....",
+    "changeLanguage": "Change Language : "
+  },
+  "sidebar": {
+    "survey": "Survey",
+    "question": "Question",
+    "respondent": "Respondent",
+    "users": "User"
+
+  }
+}

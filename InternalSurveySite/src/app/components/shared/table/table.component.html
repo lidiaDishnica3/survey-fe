@@ -1,0 +1,81 @@
+<div class="container">
+
+  <div id="divTable" style="overflow-x: scroll;">
+    <table class="table table-striped table-bordered">
+      <thead>
+          <tr>
+            <ng-container *ngFor="let tableCol of columns; index as i">
+
+              <ng-container [ngSwitch]="tableCol.title">
+
+                <th *ngSwitchCase="'Actions'" class="text-center" style="width: 22%;">
+                  <span *ngIf="translate.currentLang === 'en'">
+                    {{ 'table.column' | translate: {'title': tableCol.title} }}
+                  </span>
+                  <span *ngIf="translate.currentLang === 'sq'">
+                    {{ 'table.column' | translate: {'title': columnsSq[i].title} }}
+                  </span>
+                </th>
+
+                <th *ngSwitchDefault>
+                  <span *ngIf="translate.currentLang === 'en'">
+                    {{ 'table.column' | translate: {'title': tableCol.title} }}
+                  </span>
+                  <span *ngIf="translate.currentLang === 'sq'">
+                    {{ 'table.column' | translate: {'title': columnsSq[i].title} }}
+                  </span>
+                </th>
+
+              </ng-container>
+            </ng-container>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let row of rows | paginate : { itemsPerPage: pageSize, currentPage: this.pageNumber, totalItems: paginationModel.TotalItems }; index as i">
+            <ng-container *ngFor="let tableCol of columns;" [ngSwitch]="tableCol.property">
+              <td *ngSwitchCase="'actions'" class="text-center">
+                <button *ngIf="edit === true" type="button" class="btn btn-outline-primary mr-1 mb-1" data-toggle="modal" data-target="#exampleModal" (click)="actionEvent('edit', row.id)">
+                  <span>
+                    {{ 'table.edit' | translate }}
+                  </span>
+                </button>
+                <button *ngIf="delete === true" type="button" class="btn btn-outline-danger mr-1 mb-1" (click)="actionEvent('delete', row.id)">
+                  <span>
+                    {{ 'table.delete' | translate }}
+                  </span>
+                </button>
+                <button *ngIf="publish === true && row.startDate===null" type="button" class="btn btn-outline-success mb-1" (click)="actionEvent('publish', row.id)">
+                  <span>
+                    {{ 'table.publish' | translate }}
+                  </span>
+                </button>
+                <span *ngIf="row.endDate!==undefined &&  row.startDate!==null" style="color:green; margin-bottom: 2px;">   {{ 'table.published' | translate }} </span>
+              </td>
+              <td *ngSwitchCase="'date'">
+                {{ formatDate(getData(row, tableCol.name)) }}
+              </td>
+              <td *ngSwitchDefault>{{ getData(row, tableCol.name) }}</td>
+            </ng-container>
+          </tr>
+
+          <tr *ngIf="!rows || rows?.length == 0">
+            <td [attr.colspan]="columns.length">
+              <div class="shadow p-3 bg-white rounded">
+                {{ 'table.noData'| translate }}
+              </div>
+            </td>
+          </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="row">
+    <pagination-controls previousLabel="{{ 'pager.previous' | translate }}" nextLabel="{{ 'pager.next' | translate }}" responsive="true" (pageChange)="handlePageChange($event)"></pagination-controls>
+    <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-2 ml-auto">
+      <ng-select [items]="pageSizeItems" (change)="onPageSizeChange($event)" [(ngModel)]="paginationModel.PageSize" bindLabel="name" bindValue="value" >
+      </ng-select>
+    </div>
+  </div>
+
+</div>

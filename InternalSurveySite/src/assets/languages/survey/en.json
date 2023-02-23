@@ -1,0 +1,45 @@
+{
+
+  "table": {
+    "column": "{{ title }}",
+    "edit": "Edit",
+    "delete": "Delete",
+    "publish": "Publish",
+    "published": "Published",
+    "noData": "No data found"
+
+  },
+  "endDates": "Publish not allowed! Current date is equal or greater than end date. Please edit end date and then publish it.",
+  "invalid": "Something has gone wrong!",
+
+  "card": {
+    "title": "Survey",
+    "cardBtn": "Add new survey",
+    "wait": "Please wait..."
+
+  },
+  "pager": {
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "deleteModal": {
+    "header": {
+      "delete": "Delete survey",
+      "publish": "Publish survey"
+    },
+    "msg": {
+      "delete": "Do you want to delete survey ?",
+      "publish": "Are you sure to publish this survey ?"
+    },
+    "close": "Close",
+    "delete": "Delete",
+    "publish": "Publish"
+  },
+  "toastr": {
+    "somethingWrong": "Something went wrong!",
+    "editSuccess": "Survey edited successfully.",
+    "createSuccess": "Survey created successfully.",
+    "delete": "Survey deleted successfully."
+  }
+
+}

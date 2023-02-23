@@ -1,0 +1,20 @@
+<div class="modal-header">
+    <h4 *ngIf="mode == ''" class="modal-title">{{ 'deleteModal.header.delete' | translate }}</h4>
+    <h4 *ngIf="mode == 'publish'" class="modal-title">{{ 'deleteModal.header.publish' | translate }}</h4>
+    <button type="button" class="close" (click)="bsModalRef.hide()" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <p *ngIf="mode == ''">{{'deleteModal.msg.delete' | translate }}</p>
+    <p *ngIf="mode == 'publish'">{{'deleteModal.msg.publish' | translate }}</p>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="bsModalRef.hide()">{{ 'deleteModal.close' | translate }}</button>
+    <button *ngIf="mode == ''" type="button" class="btn btn-danger" (click)="onDeletingItem()">{{ 'deleteModal.delete' | translate }}</button>
+    <button *ngIf="mode == 'publish'" type="button" class="btn btn-success" (click)="onDeletingItem()">{{ 'deleteModal.publish' | translate }}</button>
+</div>
+
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">
+  <p style="color: white">   {{ 'card.wait' | translate }} </p>
+</ngx-spinner>

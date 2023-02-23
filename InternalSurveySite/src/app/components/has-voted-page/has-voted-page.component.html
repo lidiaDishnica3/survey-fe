@@ -1,0 +1,23 @@
+<div><br /><br /><br /></div>
+<div class="jumbotron text-center">
+  <div *ngIf="hasVoted">
+
+    <h1 class="display-3" style="color: #414a51"><strong>{{'voted'|translate}}</strong></h1>
+    <p class="lead">{{'votemessage'|translate}}</p>
+    <p class="lead"> {{'votemessagethank'|translate}}</p>
+    <hr>
+    <div class="text-center">
+      <img src="../assets/images/success.png" class="img-fluid" alt="Voted" />
+    </div>
+  </div>
+
+  <div *ngIf="!hasVoted">
+    <h1 class="display-3" style="color:orange"><strong>{{'expired'|translate}}</strong></h1>
+    <p class="lead">{{'expiredmessage'|translate}}</p>
+    <hr>
+    <div class="text-center">
+      <img src="../assets/images/session-expired.png" class="img-fluid" alt="Expired" width="400" />
+    </div>
+  </div>
+
+</div>

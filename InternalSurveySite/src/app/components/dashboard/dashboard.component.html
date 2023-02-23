@@ -1,0 +1,89 @@
+<div class="container">
+  <div *ngIf="surveyList?.length == 0"><h3 style="color: red;">{{ 'noSurvey' | translate }}</h3></div>
+  <div *ngIf="surveyList?.length > 0">
+
+      <form [formGroup]="DashboardGroup">
+        <div class="panel-heading">
+
+          <div class="form-group">
+            <label>{{ 'selectSurvey' | translate }}</label>
+            <select [(ngModel)]="selectedSurveyId" style="width:300px;" (change)="getAllData()"
+             class="js-example-basic-hide-search js-states form-control form-control minimal cs-select cs-skin-elastic"
+             formControlName="Survey">
+              <option *ngFor="let i of surveyList" [value]="i.id">{{i.title}}</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>{{ 'selectQuestion' | translate }}</label>
+            <select [(ngModel)]="selectedQuestionId" style="width:300px;" class="js-example-basic-hide-search js-states form-control minimal cs-select cs-skin-elastic"
+                    (change)="getRespondentsPerQuestion()" formControlName="Question">
+              <option value="" selected>None</option>
+              <option *ngFor="let i of questionDropdown" [value]="i.questionId">{{i.questionTitle}}</option>
+            </select>
+          </div>
+
+        </div>
+      </form>
+
+      <h3 *ngIf="showInfo == false" style="color: red !important; margin-left: 30px !important;">{{ 'surveyNoRespondents' | translate }}</h3>
+</div>
+
+    <div class="container" *ngIf="showInfo == true">
+    <div class="panel panel-white" id="panel4">
+      <div class="panel-heading">
+        <h4 class="panel-heading border-light">{{ 'respondentsPerSurvey' | translate }}</h4>
+        <div style="display: block;">
+          <canvas baseChart
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [plugins]="barChartPlugins"
+            [legend]="barChartLegend"
+            [chartType]="barChartType">
+          </canvas>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <h3 *ngIf="showInfo == false" style="color: red !important; margin-left: 30px !important;">{{ 'surveyNoResponses' | translate }}</h3>
+  <div class="container" *ngIf="showInfo == true">
+    <div class="panel panel-white" id="panel4">
+      <div class="panel-heading">
+        <h4 class="panel-heading border-light">{{ 'responsesPerQuestion' | translate }}</h4>
+        <div style="display: block;">
+          <canvas baseChart
+            [datasets]="barChartData2"
+            [labels]="barChartLabels2"
+            [options]="barChartOptions2"
+            [plugins]="barChartPlugins2"
+            [legend]="barChartLegend2"
+            [chartType]="barChartType2">
+          </canvas>
+        </div>
+
+        <div id="chartjsImgs" class="row">
+          <ng-container *ngFor="let img of imgSrcArray; index as i;">
+
+            <div *ngIf="i === 0" class="col" style="text-align: center; height: 50px; margin-left: 4%;" [style.width.%]="imgWidth">
+              <img class="zoom"  style="max-height:100%; max-width:100%;" [src]="img.option" />
+            </div>
+            <div *ngIf="i !== 0" class="col" style="text-align: center; height: 50px;" [style.width.%]="imgWidth">
+              <img class="zoom" style="max-height:100%; max-width:100%;" [src]="img.option" />
+            </div>
+
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">
+  <p style="color: white">{{ 'card.wait' | translate }} </p>
+</ngx-spinner>

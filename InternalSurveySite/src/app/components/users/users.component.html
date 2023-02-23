@@ -1,0 +1,26 @@
+<div class="card m-4">
+  <div class="card-header">
+    <div class="row">
+      <span>
+
+        {{ 'title' | translate }}
+      </span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="container">
+      <button type="button" class="btn btn-success" (click)="onNew()">
+        <span>
+          {{ 'cardBtn' | translate }}
+        </span>
+      </button>
+    </div>
+    <br>
+    <app-table [rows]="users" [columns]="columns" [columnsSq]="columnsSq" [delete]="true"  [edit]="false"
+               [paginationModel]="paginationModel" (paginationEmitter)="onPaginationValuesChange($event)" (actionClicked)="actionEvent($event)"></app-table>
+  </div>
+</div>
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">
+  <p style="color: white">   {{ 'wait' | translate }} </p>
+</ngx-spinner>
+

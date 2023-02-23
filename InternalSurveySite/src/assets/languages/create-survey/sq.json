@@ -1,0 +1,49 @@
+{
+
+  "titleSurvey": {
+    "title": "Krijo një pyetësor",
+    "titleUpdate": "Modifiko pyetësorin"
+  },
+  "form": {
+    "formsErrors": "Forma ka probleme. Ju lutem kontrolloni të dhënat e futura.",
+    "title": "Titulli i pyetësorit",
+    "description": "Përshkrimi i pyetësorit",
+    "endDate": "Zgjidh datën e përfundimit",
+    "endDateValidator": "Data e përfundimit duhet të jetë më e madhe se data e sotme.",
+    "questions": "Pyetjet e pyetësorit",
+    "qtitle": "Titulli i pyetjes",
+    "qrequired": "Pyetja është e detyrueshme (Duhet të ketë minimumi një përgjigje)",
+    "qdesc": "Përshkrimi i pyetjes",
+    "qorder": "Renditja e pyetjes",
+    "qtype": "Tipi i pyetjes",
+    "addOption": "Shto një opsion",
+    "qothers": "Ka opsion të lirë(tjetër) (përgjigja do të jetë në tekst)",
+    "stars": "Numri maksimal i yjeve (5-10)",
+    "startsError": "Numri i yjeve duhet të jetë nga 5 deri në 10",
+    "textarea": "Tekst i lirë për t'u përgjigjur nga ankëtari",
+    "addQuestion": "Shto një pyetje",
+    "addSurvey": "Krijo pyetësorin",
+    "updateSurvey": "Modifiko pyetësorin",
+    "optiontext": "Teksti opsionit",
+    "wait": "Ju lutem prisni...",
+    "back": "Shko mbrapa",
+    "imgWrong": "Imazhi ka probleme! Ju lutem provoni përsëri!",
+    "imgAdd": "Imazhi është fushë e detyruar!",
+    "comments": "Komentet e pyetesorit",
+    "comment": "Komenti:",
+    "addComment": "Shto nje koment"
+  },
+  "error": {
+    "somethingWentWrongRetry": "Diçka shkoi keq. Ju lutem provoni sërish!",
+    "somethingWentWrong": "Diçka shkoi keq!",
+    "internalError": "Problem i brendshëm!",
+    "requiredFields": "Ju lutem plotësoni fushat e kërkuara!",
+    "cantEditSurvey": "Ky pyetësor nuk mund të ndryshohet tashmë është publikuar!",
+    "cantDeleteComment": "Ky koment nuk mund të fshihet nga ju!"
+
+  },
+  "success": {
+    "createdSuccessfully": "Pyetësori u krijua me sukses!",
+    "updatedSuccessfully": "Pyetësori u ndryshua me sukses!"
+  }
+}

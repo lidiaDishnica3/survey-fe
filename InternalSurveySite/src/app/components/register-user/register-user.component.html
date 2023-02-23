@@ -1,0 +1,76 @@
+<div class="app-body">
+  <main class="main d-flex align-items-center">
+    <div class="container">
+      <div class="animated fadeIn m-2 justify-content-center">
+        <div class="card">
+          <div class="card-header">
+            <span>{{'register' | translate }} {{'user' | translate}}</span>
+          </div>
+          <div class="card-body">
+            <form class="form-register" [formGroup]="registerForm" (ngSubmit)="onSubmit()" (keydown.enter)="onSubmit()" autocomplete="off">
+
+              <div class="form-group">
+                <div class="mb-3">
+                  <mat-form-field class="full-width" style="display:block;position:unset;">
+                    <input formControlName="FirstName" id="name" matInput placeholder="{{'firstName' | translate}}" [required]="true">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="mb-3">
+                  <mat-form-field class="full-width" style="display:block;position:unset;">
+                    <input formControlName="LastName" id="lastname" matInput placeholder="{{'lastName' | translate}}" [required]="true">
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <div class="form-group">
+
+                <div class="mb-3">
+                  <mat-form-field class="full-width" style="display:block;position:unset;">
+                    <input type="email" formControlName="Email" id="email" matInput placeholder="{{'email' | translate}}" [required]="true">
+                  </mat-form-field>
+                  <div *ngIf="formControll.Email.errors?.email">{{'validatorEmailIsValid' | translate}}</div>
+                  <mat-error>{{duplicateEmail}}</mat-error>
+
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="mb-4">
+                  <mat-form-field class="full-width" style="display:block;position:unset;">
+                    <input type="password" formControlName="Password" id="password" matInput placeholder="{{'password' | translate}}" [required]="true">
+                  </mat-form-field>
+                  <div *ngIf="formControll.Password.errors?.pattern">
+                    {{'validatorPasswordPattern' | translate}}
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+
+                <div class="mb-4">
+                  <mat-form-field class="full-width" style="display:block;position:unset;">
+                    <input type="password" formControlName="ConfirmPassword" id="confirmPassword" matInput placeholder="{{'confirmNewPassword' | translate}}" [required]="true">
+                  </mat-form-field>
+                  <div *ngIf="formControll.ConfirmPassword.errors?.mustMatch">{{ 'validatorPasswordsMustMatch'| translate }}</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary btn btn-block">{{'register' | translate}}</button>             
+                </div>              
+              </div>
+            </form>
+            <div class="row">
+              <div class="col-md-12 mt-3">
+                <button type="button" class="btn btn-secondary btn btn-block" (click)="goBack()">{{'cancel' | translate}}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">
+  <p style="color: white">   {{ 'wait' | translate }} </p>
+</ngx-spinner>

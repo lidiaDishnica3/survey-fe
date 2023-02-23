@@ -1,0 +1,22 @@
+{
+  "survey": "Survey",
+  "submission": "Submit",
+  "successSubmission": "Survey submitted successfully",
+  "other": "Other",
+  "wait": "Please wait...",
+  "hasVoted": "has voted",
+  "surveyHasExpired": "has expired",
+  "invalidPage": "Invalid page",
+  "internalError": "Internal error",
+  "invalidSurvey": "Invalid survey",
+  "invalidEmail": "Invalid email",
+  "question": "Question",
+  "questions": "Questions",
+  "isRequired": "is required",
+  "areRequired": "are required",
+  "Comments": "Comments",
+  "addComment": "Add Comment",
+  "commentSubmission": "Comment added successfully",
+  "comment": "Comment:"
+}
+

@@ -1,0 +1,15 @@
+{
+  "selectSurvey": "Select Survey",
+  "selectQuestion": "Select Question",
+  "noSurvey": "No Survey found!",
+  "surveyNoRespondents": "This survey has no respondents yet!",
+  "surveyNoResponses": "This survey has no response yet!",
+  "respondentsPerSurvey": "Respondents per survey",
+  "responsesPerQuestion": "Responses per question",
+  "toastr": {
+    "somethingWrong": "Something went wrong"
+  },
+  "card": {
+    "wait": "Please wait..."
+  }
+}

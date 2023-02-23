@@ -1,0 +1,18 @@
+{
+  "thankyou": "Faleminderit!",
+  "hello": "Përshëndetje",
+  "switched": "Fikur opsioni i kujtesës së email-it me sukses!",
+  "ThanksForSubmitting": "Faleminderit që plotësuat pyetësorin tonë..",
+  "YourResponse": "Përgjigjia juaj është e rëndësishme për ne!",
+  "switchOff": "ju keni fikur opsionin që ju dërgon email kujtesë për pyetësorin:",
+  "dontmiss": "Mos humbisni pyetësorët e rinj në email-in tuaj! Ju na ndihmoni për t'u përmirësuar!",
+  "voted": "Faleminderit! Ju keni votuar mëparë.",
+  "votemessage": "Ju falenderojmë për kohën e kushtuar në plotësimin e pyetësorit! Ju tashmë keni votuar për këtë pyetësor.",
+  "votemessagethank": "Ju mund të votoni në pyetësorët që do të ju dërgojmë në vijueshmëri... Faleminderit!",
+  "expired": "Pyetësori ka përfunduar!",
+  "expiredmessage": "Ju falenderojmë! Pyetësori ka përfunduar dhe nuk mund të plotësohet...",
+  "wait": "Ju lutem prisni...",
+  "invalid": "Diçka ka shkuar keq! Faqja që keni kërkuar nuk u gjet!",
+  "notFound": "Ups! Faqja nuk u gjet!",
+  "sorry": "Na vjen keq, por faqja e kërkuar nga ju nuk u gjet!"
+}

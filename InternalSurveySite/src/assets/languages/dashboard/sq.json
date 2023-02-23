@@ -1,0 +1,15 @@
+{
+  "selectSurvey": "Zgjidhni pyetësorin",
+  "selectQuestion": "Zgjidhni pyetjen",
+  "noSurvey": "Nuk u gjet asnjë pyetësor",
+  "surveyNoRespondents": "Ky pyetësor nuk ka ankëtarë akoma!",
+  "surveyNoResponses": "Ky pyetësor nuk ka përgjigje akoma!",
+  "respondentsPerSurvey": "Ankëtarë për pyetësorin",
+  "responsesPerQuestion": "Përgjigje për pyetjen",
+  "toastr": {
+    "somethingWrong": "Dicka shkoi keq"
+  },
+  "card": {
+    "wait": "Ju lutem prisni..."
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "register": "Regjistro",
+  "user": "Përdorues",
+  "invalidForm": "Forma është e pavlevshme!",
+  "fillOut": "Ju lutem plotësoni fushat e detyrueshme!",
+  "somethingWentWrong": "Diçka shkoi keq!",
+
+  "successfullyRegistered": "U regjistrua me sukses!",
+  "successfullyEdited": "U ndryshua me sukses!",
+
+  "generalInformations": "Informacione të përgjithshme",
+  "accountInformation": "Informacione të llogarisë",
+  "changeYourPassword": "Ndrysho fjalëkalimin",
+  "editUser": "Modifiko përdorues",
+  "generalInformationsDescription": "Të dhënat e profilit tuaj",
+  "firstName": "Emër",
+  "lastName": "Mbiemër",
+  "email": "Email",
+  "password": "Fjalëkalim",
+  "currentPassword": "Fjalëkalimi aktual",
+  "newPassword": "Fjalëkalim i ri",
+  "confirmNewPassword": "Konfirmo fjalëkalimin e ri",
+  "cancel": "Anullo",
+  "save": "Ruaj",
+
+  "validatorNameIsRequired": "*Emri duhet plotësuar.",
+  "validatorLastNameIsRequired": "*Mbiemri duhet plotësuar.",
+  "validatorEmailIsRequired": "*Email duhet plotësuar.",
+  "validatorEmailIsValid": "Email duhet te jete i vlevshëm.",
+  "validatorPasswordIsRequired": "*Fjalëkalimi duhet plotësuar.",
+  "validatorNewPasswordIsRequired": "*Fjalëkalimi i ri duhet plotësuar.",
+  "validatorPasswordsMustMatch": "Fjalëkalimet duhet te përputhen.",
+  "validatorPasswordPattern": "Fjalëkalimi duhet të përmbajnë të paktën tetë karaktere, duke përfshirë shkronjat e mëdha, të vogla dhe numrat.",
+  "exists": "ekziston",
+  "wait": "Ju lutem prisni...",
+  "notValid": "nuk është i vlefshëm",
+  "table": {
+    "column": "{{ title }}",
+    "edit": "Ndrysho",
+    "delete": "Fshi",
+    "noData": "Nuk u gjet asnjë e dhenë"
+
+  },
+  "cardBtn": "Shto një përdorues të ri",
+  "title": "Përdoruesit",
+  "pager": {
+    "previous": "Mbrapa",
+    "next": "Përpara"
+  },
+  "deleteModal": {
+    "header": "Fshi përdorues",
+    "msg": "A doni të fshini përdoruesin?",
+    "close": "Mbyll",
+    "delete": "Fshi"
+  },
+  "toastr": {
+    "somethingWrong": "Dicka nuk është në rregull!",
+    "editSuccess": "Përdoruesi u azhornua me sukses.",
+    "createSuccess": "Përdoruesi u krijua me sukses.",
+    "delete": "Përdoruesi u fshi me sukses."
+  }
+}

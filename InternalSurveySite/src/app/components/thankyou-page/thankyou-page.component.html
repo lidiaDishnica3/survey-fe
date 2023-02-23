@@ -1,0 +1,38 @@
+<div><br /><br /><br /></div>
+<div class="jumbotron text-center">
+  <div *ngIf="hasSwitchOff && !iswaitingForData &&  !hasError">
+
+    <h1 class="display-3" style="color:forestgreen"><strong>{{'switched'|translate}}</strong></h1>
+    <p class="lead"><strong>{{'hello'|translate}}, {{respondentEmail}},</strong> {{'switchOff'|translate}}<strong> {{surveyTitle}}</strong>.</p>
+    <p class="lead"> {{'dontmiss'|translate}}</p>
+    <hr>
+    <div class="text-center">
+      <img src="../assets/images/off.png" class="img-fluid" alt="Switched off" />
+    </div>
+  </div>
+
+  <div *ngIf="!hasSwitchOff && !iswaitingForData && !hasError">
+    <h1 class="display-3" style="color:forestgreen"><strong>{{'thankyou'|translate}}</strong></h1>
+    <p class="lead">{{'ThanksForSubmitting'|translate}}</p>
+    <p class="lead">{{'YourResponse'|translate}}</p>
+    <hr>
+    <div class="text-center">
+      <img src="../assets/images/thank you.jpg" class="img-fluid" alt="Thank you" />
+    </div>
+  </div>
+
+  <div *ngIf="hasError && !iswaitingForData">
+    <h1 class="display-3" style="color: #414a51"><strong>{{'notFound'|translate}}</strong></h1>
+    <p class="lead"> {{'sorry'|translate}}</p>
+    <hr>
+    <div class="text-center">
+      <img src="../assets/images/error4.png" class="img-fluid" alt="Not found" width="300" />
+    </div>
+  </div>
+  <div *ngIf="iswaitingForData">
+  </div>
+</div>
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">
+  <p style="color: white">   {{ 'wait' | translate }} </p>
+</ngx-spinner>
+

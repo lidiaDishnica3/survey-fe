@@ -1,0 +1,41 @@
+<div class="app-body">
+  <main class="main d-flex align-items-center">
+    <div class="container">
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin()" autocomplete="off">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <div class="card p-5" (keydown)="keyDownFunction($event)">
+              <div class="card-body">
+                <h1 class="text-center">{{'login' | translate}}</h1>
+                <br />
+                <div class="form-group text-center">
+                  <div class="mb-3">
+                    <mat-form-field class="full-width" style="display:block;position:unset;">
+                      <input formControlName="email" matInput placeholder="Email" [required]="true">
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="form-group  text-center">
+                  <div class="mb-4">
+                    <mat-form-field class="full-width" style="display:block;position:unset;">
+                      <input type="password" id="password" formControlName="password" matInput placeholder="{{'password' | translate}}" [required]="true">
+                    </mat-form-field>
+                  </div>
+                </div>
+                <br />
+                <div class="row">
+                  <div class="col-lg-12 text-center">
+                    <button class="btn btn-primary px-4" type="submit" mat-raised-button>{{'login' | translate}}</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+</div>
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">
+  <p style="color: white">   {{ 'wait' | translate }} </p>
+</ngx-spinner>

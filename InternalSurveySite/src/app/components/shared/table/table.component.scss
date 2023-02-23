@@ -1,0 +1,18 @@
+@media (max-width: 900px) {
+  #divTable {
+    overflow-x: scroll;
+  }
+}
+
+@media (min-width: 901px) {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  #divTable::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  #divTable {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "thankyou": "Thank You!",
+  "hello": "Hello",
+  "switched": "Switched off reminder successfully!",
+  "ThanksForSubmitting": "Thank you for taking our survey...",
+  "YourResponse": "Your response is very important to us!",
+  "switchOff": "you have switch off the survey:",
+  "dontmiss": "Don't miss the new surveys in your mail! You can help us to improve!",
+  "voted": "Thank you! You've already voted",
+  "votemessage": "We thank you for taking your time to fill the survey! We inform you that you have already voted on this survey!",
+  "votemessagethank": "You can vote one the new surveys that we will send to you... Thank you!",
+  "expired": "The survey has expired!",
+  "expiredmessage": "We thank you! This survey, has already expired and cannot be filled anymore...",
+  "wait": "Please wait...",
+  "invalid": "Something has gone wrong! This page was not found!",
+  "notFound": "Oops! Page not found!",
+  "sorry": "We are sorry, but the page you requested was not found!"
+
+}

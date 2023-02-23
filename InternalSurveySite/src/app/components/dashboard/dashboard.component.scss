@@ -1,0 +1,7 @@
+.zoom:hover {
+  -ms-transform: scale(3); /* IE 9 */
+  -webkit-transform: scale(3); /* Safari 3-8 */
+  transform: scale(3);
+  position: relative;
+  z-index: 2;
+}

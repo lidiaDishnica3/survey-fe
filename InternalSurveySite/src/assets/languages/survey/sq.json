@@ -1,0 +1,41 @@
+{
+  "table": {
+    "column": "{{ title }}",
+    "edit": "Ndrysho",
+    "delete": "Fshi",
+    "publish": "Publiko",
+    "published": "Publikuar",
+    "noData": "Nuk u gjet asnjë e dhenë"
+
+  },
+  "endDates": "Publikimi nuk u lejua! Data e sotme është më e madhe ose e barabartë me ditën e përfundimit. Ju lutem modifikoni datën e përfundimit dhe më pas publikoni pyetësorin.",
+  "invalid": "Diçka shkoi keq!",
+  "card": {
+    "title": "Pyetësor",
+    "cardBtn": "Shto një pyetësor të ri",
+    "wait": "Ju lutem prisni..."
+  },
+  "pager": {
+    "previous": "Mbrapa",
+    "next": "Përpara"
+  },
+  "deleteModal": {
+    "header": {
+      "delete": "Fshi pyetësorin",
+      "publish": "Publiko pyetësorin"
+    },
+    "msg": {
+      "delete": "A doni të fshini pyetësorin ?",
+      "publish": "A doni të publikoni pyetësorin ?"
+    },
+    "close": "Mbyll",
+    "delete": "Fshi",
+    "publish": "Publiko"
+  },
+  "toastr": {
+    "somethingWrong": "Dicka nuk është në rregull!",
+    "editSuccess": "Pyetësori u azhornua me sukses.",
+    "createSuccess": "Pyetësori u krijua me sukses.",
+    "delete": "Pyetësori u fshi me sukses."
+  }
+}
