@@ -2,9 +2,11 @@ FROM tiangolo/node-frontend:10 as build-stage
 
 
 WORKDIR /app
-EXPOSE 443
+# EXPOSE 443
 EXPOSE 80
 COPY package*.json /app/
+ RUN npm config set strict-ssl false
+
 RUN npm install
 COPY ./ /app/
 ARG configuration=production
